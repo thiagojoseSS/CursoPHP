@@ -1,0 +1,24 @@
+body.exercicio {
+    grid-template-rows: 120px 60px 1fr 60px;
+    grid-template-areas: 
+        "cabecalho"
+        "navegacao"
+        "principal"
+        "rodape";
+}
+
+.principal {
+    height: calc(100vh - 240px);
+}
+
+.conteudo {
+    font-size: 2rem;
+}
+
+.conteudo > .titulo {
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding: 10px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,183 @@
+*{
+    font-family: 'Oswald' sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+    display: grid;
+    /* grid-template-rows: 120px 1fr 60px; */
+    grid-template-rows: 120px 60px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "cabecalho"
+        "navegacao"
+        "principal"
+        "rodape";
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+    background-color: rgb(10, 84, 153);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    z-index: 1;
+    box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.75);
+}
+
+.cabecalho > h1{
+    margin: 0px;
+    font-weight: 400;
+    font-size: 2.9rem;
+}
+
+.cabecalho > h2{
+    margin: 0px;
+    font-weight: 200px;
+    font-size: 1.6rem;
+}
+
+
+.principal {
+    grid-area: principal;
+    /* height: calc(100vh - 180px); Tamanho total da tela- cabecalho e rodape */
+    height: calc(100vh - 240px);
+    background-color: white;
+    padding: 20px;
+}
+
+.conteudo {
+    position: relative;
+    height:100%;
+    overflow-y: scroll;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
+}
+
+.rodape {
+    grid-area: rodape;
+    background-color: rgb(214, 201, 156);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    padding-right: 20px;
+    color: rgb(78, 78, 78);
+
+}
+
+.modulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.modulo {
+    flex-basis: 32%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.modulo > h3 {
+    margin: 0px;
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background: rgb(10, 84, 153);
+}
+
+.modulo > ul {
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+}
+
+.modulo > ul > li {
+    padding: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.modulo > ul > li > a {
+    display: flex;
+    text-decoration: none;
+    color: #222;
+}
+
+.modulo > ul > li:hover {
+    background: rgb(212, 212, 212);
+}
+
+.modulo.verde { border: 2px solid rgb(78, 163, 78);}
+.modulo.verde > h3 { background: rgb(78, 163, 78);}
+
+.modulo.vermelho { border: 2px solid rgb(235, 89, 89);}
+.modulo.vermelho > h3 { background: rgb(235, 89, 89);}
+
+.modulo.azul { border: 2px solid rgb(48, 53, 131);}
+.modulo.azul > h3 { background: rgb(48, 53, 131);}
+
+.modulo.laranja { border: 2px solid rgb(153, 102, 35);}
+.modulo.laranja > h3 { background: rgb(153, 102, 35);}
+
+.modulo.rosa { border: 2px solid rgb(194, 55, 182);}
+.modulo.rosa > h3 { background: rgb(194, 55, 182);}
+
+.modulo.roxo { border: 2px solid rgb(97, 6, 139);}
+.modulo.roxo > h3 { background: rgb(97, 6, 139);}
+
+.modulo.amarelo-c { border: 2px solid rgb(180, 168, 3);}
+.modulo.amarelo-c > h3 { background:rgb(180, 168, 3);}
+
+.modulo.marrom { border: 2px solid rgb(88, 69, 46);}
+.modulo.marrom > h3 { background: rgb(88, 69, 46);}
+
+.modulo.verde-escuro { border: 2px solid rgb(3, 56, 19);}
+.modulo.verde-escuro > h3 { background: rgb(3, 56, 19);}
+
+.modulo.laranja-escuro { border: 2px solid rgb(199, 65, 3);}
+.modulo.laranja-escuro > h3 { background: rgb(199, 65, 3);}
+
+p.divisao {margin-top: 0px;font-weight: bold;}
+hr {margin-bottom: 0px;}
+
+p.divisao2 {margin-bottom: 0px;font-weight: bold;}
+hr.d2 {margin-top: 0px;}
+
+
+.navegacao {
+    grid-area: navegacao;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #555;
+}
+
+.navegacao > a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.3rem;
+    background-color: rgb(98, 152, 206);
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.navegacao > a.verde { background: rgb(78, 163, 78);}
+.navegacao > a.vermelho { background: rgb(235, 89, 89);}
+
+span.usuario {
+    flex-grow: 1;
+    justify-self: start;
+    color: #EEE;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
