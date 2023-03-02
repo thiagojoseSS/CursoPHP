@@ -1,3 +1,4 @@
 {
-  "liveServer.settings.multiRootWorkspaceName": "CursoPHP"
+  "liveServer.settings.multiRootWorkspaceName": "CursoPHP",
+  "intelephense.environment.phpVersion": "7.4.16"
 }
